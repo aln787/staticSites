@@ -1,4 +1,4 @@
-## Static Site Generation with Frozen Flask and AWS S3
+## Static Site Generation and Deployment with Frozen Flask and AWS S3
 
 ###GH Pages
 - GH Pages URL structure: ```<username>.github.io/<project name>```

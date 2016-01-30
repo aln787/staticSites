@@ -19,6 +19,3 @@
 
 
 <img src="images/FrozenFlask.png" alt="idea" height="400">
-
-
-<img src="images/BarnyChallengeAccepted.png" alt="Challenge Accepted" height="400">
