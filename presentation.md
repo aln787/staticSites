@@ -8,6 +8,14 @@
 </p>
 
 
+###Overview
+- Word together through modifying and deploying a frozen-flask example
+- Learn a bit about Amazon Web Services (AWS) in the process
+
+
+<img src="images/Alex_and_Catelyn-CryatalMt-WA.png" height="600">
+
+
 <img src="images/CapitalOneLabs_Overview.png" height="600">
 
 
@@ -330,10 +338,34 @@ aws help
 - [Additional details / official AWS CLI install instructions](http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-bundle-other-os)
 
 
-#Add screen shots
+###Configure IAM and Access key / secret
+<img src="images/iam/IAM_console.png" height="540">
 
 
-####Configure the AWS CLI
+###Create a new user if you don't already have one created
+<img src="images/iam/IAM_createNewUser.png" height="540">
+
+
+###Attach the S3 policy to that user
+<img src="images/iam/IAM_attachS3Policy.png" height="540">
+
+
+###S3 Policy Details
+<img src="images/iam/IAM_S3AccessPolicy.png" height="540">
+
+
+###More of that awesome AWS JSON config meta data
+<iframe src="http://giphy.com/embed/tbAY4hlx9fzjy?hideSocial=true" width="400" height="400" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
+<!-- Flying?-tbAY4hlx9fzjy -->
+
+- Kinda makes you want to pull your hair out.
+
+
+###Create Access Key
+<img src="images/iam/IAM_createAccessKey.png" height="540">
+
+
+###Configure the AWS CLI
 ```shell
 aws configure
 #AWS Access Key ID [None]: <Your Key>
@@ -342,7 +374,7 @@ aws configure
 #Default output format [None]: json
 ```
 
-<br>
+
 ####S3 bucket creation, content sync and configuration
 ```shell
 #aws s3 rb s3://frozen-flask-cli --force  #Remove existing folder with this name
@@ -355,7 +387,9 @@ aws s3api put-bucket-website --bucket frozen-flask-cli --website-configuration f
 #aws s3api put-bucket-website help
 ```
 
-- *Note: the AWS API requests for "put-bucket-website" fails with an unclear error messages, if your bucket name contains any capital letters.
+- *Notes: 
+  - S3 bucket names have to be globally unique.
+  - The AWS API requests for "put-bucket-website" fails with an unclear error messages, if your bucket name contains any capital letters.
 
 
 ####Now we are getting some love! Much better!!
@@ -367,6 +401,9 @@ aws s3api put-bucket-website --bucket frozen-flask-cli --website-configuration f
 #AWS Automation 
 ##W/ Python Boto3
 
+
+#Future talk if folks are interested
+
 ---
 
 #Additional Information
@@ -376,10 +413,12 @@ aws s3api put-bucket-website --bucket frozen-flask-cli --website-configuration f
 - Explored
 	- Pelican, Jekyll
 - Still to Explore
-  - [Lektor](https://www.getlektor.com/), [Hugo](https://gohugo.io/), Hexo, Hyde, Brunch, Middleman, Harp, Expose, ...
+  - [Hugo](https://gohugo.io/), [Lektor](https://www.getlektor.com/) <small>*(Could also be a future talk if folks are interested)*</small>, Hexo, Hyde, Brunch, Middleman, Harp, Expose, ...
 
 
 ###Links
 - [Blog that inspired investigating frozen flask](http://lucumr.pocoo.org/2015/12/21/introducing-lektor/
 )
-- [Place to submit PR with updates](https://github.com/n1k0/nicolas.perriault.net/)
+  - [Place to submit PR with updates](https://github.com/n1k0/nicolas.perriault.net/)
+- [Source for this presentation](http://github.com/aln787/staticSites)
+-  [Source for my simple frozen-flask static blog site](http://github.com/aln787/frozenFlask)
