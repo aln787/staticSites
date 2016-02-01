@@ -149,7 +149,47 @@ ls -lah
 
 ---
 
-#ASW CLI / S3 Deploy
+#ASW CLI S3 Deploy
+
+
+###AWS CLI Install
+```shell
+python --version
+#Looking for above 2.6.5+ or 3.3+
+curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+unzip awscli-bundle.zip
+./awscli-bundle/install -b ~/bin/aws
+echo $PATH | grep ~/bin #See if $PATH contains ~/bin (output will be empty if it doesn't)
+export PATH=~/bin:$PATH #Add ~/bin to $PATH if necessary
+#Confirm the install worked correctly
+aws help
+```
+- [Additional details / official AWS CLI install instructions](http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-bundle-other-os)
+
+
+####Configure the AWS CLI
+```shell
+aws configure
+#AWS Access Key ID [None]: <Your Key>
+#AWS Secret Access Key [None]: <Your Secret>
+#Default region name [None]: us-east-1
+#Default output format [None]: json
+```
+
+<br>
+####S3 bucket creation, content sync and configuration
+```shell
+#aws s3 rb s3://frozen-flask-cli --force  #Remove existing folder with this name
+aws s3 mb s3://frozen-flask-cli
+pwd
+#<your path>/frozenFlask
+aws s3 sync build/ s3://frozen-flask-cli --exclude '.DS_Store'
+aws s3api put-bucket-policy --bucket frozen-flask-cli --policy file://bucketPolicy.json
+aws s3api put-bucket-website --bucket frozen-flask-cli --website-configuration file://enableWebHosting.json
+#aws s3api put-bucket-website help
+```
+
+- *Note: the AWS API requests for "put-bucket-website" fails with an unclear error messages, if your bucket name contains any capital letters.
 
 ---
 
