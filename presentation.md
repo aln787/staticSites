@@ -93,10 +93,10 @@ pip install
 #AWS S3 Deploy
 
 
-<img src="images/S3/AWS_S3.png" height="540">
+<img src="images/s3/AWS_S3.png" height="540">
 
 
-<img src="images/S3/S3-CreateFolders_and_AddFiles.png" height="540">
+<img src="images/s3/S3-CreateFolders_and_AddFiles.png" height="540">
 
 
 ####Files and Folders to add to S3
@@ -111,13 +111,13 @@ ls -lah
 ```
 
 
-<img src="images/S3/S3-Enable-Static-Website-Hosting.png" height="540">
+<img src="images/s3/S3-Enable-Static-Website-Hosting.png" height="540">
 
 
-<img src="images/S3/S3-403.png" height="540">
+<img src="images/s3/S3-403.png" height="540">
 
 
-<img src="images/S3/S3-Add-Bucket-Policy.png" height="540">
+<img src="images/s3/S3-Add-Bucket-Policy.png" height="540">
 
 
 ###Bucket policy to add
@@ -139,7 +139,7 @@ ls -lah
 ```
 
 
-<img src="images/S3/S3-Done-OpenSite.png" height="440">
+<img src="images/s3/S3-Done-OpenSite.png" height="440">
 
 - [Example Simple Frozen-Flask Site](http://frozen-flask-bucket2.s3-website-us-east-1.amazonaws.com/)
 - [S3 Bucket(*Permission required to view)](https://console.aws.amazon.com/s3/home?region=us-west-2#&bucket=frozen-flask-bucket2&prefix=)
