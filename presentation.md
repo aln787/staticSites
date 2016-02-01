@@ -26,6 +26,28 @@
 <!-- - [Place to submit PR with updates](https://github.com/n1k0/nicolas.perriault.net/) -->
 
 
+<iframe src="http://giphy.com/embed/vBVCam8nE7uxy?hideSocial=true" width="680" height="567" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
+<!-- Polar Bear GIFS
+ollAndSlide-XGHCQGcfyl6lW
+Help-H2VD6psStWlJ6
+GetTheBabby-vBVCam8nE7uxy
+CuddleFest-2ur8NS5TYQmK4
+Pouncing-2c2DyqhbixfUY
+ConfusionCubsRunning-FdvUazOcLjwzK -->
+<!-- Penguin GIFS 
+Slap-wHSMEx2TtEo8
+Flying?-tbAY4hlx9fzjy
+Let-sGetOutOfHere-9hbECTMVSdG0
+getOutOfTheHouse-B1JDGg2BgvfVe
+JumpingPenguins-otnqsqqzmsw7K
+penguinSlide_hereWeGo-9UCStxAde7lK -->
+
+
+<iframe id="ytplayer" type="text/html" width="640" height="390"
+  src="http://www.youtube.com/embed/L0MK7qz13bU?autoplay=0&start=65"
+  frameborder="0"/>
+
+
 ###Getting started
 ```shell
 mkdir sample_project && cd $_
@@ -59,10 +81,68 @@ pip install
 
 ---
 
+#AWS Sign-up
+
+
+<img src="images/AWS_HomePage.png" height="500">
+
+- [Register](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html)
+
+---
+
 #AWS S3 Deploy
 
 
-###Add screen shots
+<img src="images/S3/AWS_S3.png" height="540">
+
+
+<img src="images/S3/S3-CreateFolders_and_AddFiles.png" height="540">
+
+
+####Files and Folders to add to S3
+```
+pwd
+# <your path>/frozenFlask
+cd build/
+ls -lah
+#drwxr-xr-x   3 <user>  <group>   102B Jan 27 01:23 frozen-flask
+#drwxr-xr-x   3 <user>  <group>   102B Jan 27 01:23 hello-world
+#-rw-r--r--   1 <user>  <group>   428B Jan 27 01:23 index.html
+```
+
+
+<img src="images/S3/S3-Enable-Static-Website-Hosting.png" height="540">
+
+
+<img src="images/S3/S3-403.png" height="540">
+
+
+<img src="images/S3/S3-Add-Bucket-Policy.png" height="540">
+
+
+###Bucket policy to add
+```
+{
+	"Version": "2008-10-17",
+	"Statement": [
+		{
+			"Sid": "AllowPublicRead",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": "*"
+			},
+			"Action": "s3:GetObject",
+			"Resource": "arn:aws:s3:::frozen-flask-bucket2/*"
+		}
+	]
+}
+```
+
+
+<img src="images/S3/S3-Done-OpenSite.png" height="440">
+
+- [Example Simple Frozen-Flask Site](http://frozen-flask-bucket2.s3-website-us-east-1.amazonaws.com/)
+- [S3 Bucket(*Permission required to view)](https://console.aws.amazon.com/s3/home?region=us-west-2#&bucket=frozen-flask-bucket2&prefix=)
 
 ---
 
