@@ -81,8 +81,10 @@ pip install
 
 ---
 
-#AWS Sign-up
+#Why AWS / Register
 
+
+<img src="images/s3/AWS_Gartner_2015_MQ.png" height="540">
 
 <img src="images/AWS_HomePage.png" height="500">
 
