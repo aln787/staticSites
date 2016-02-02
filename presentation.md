@@ -69,7 +69,7 @@ touch templates/index.html
 <!-- - [Place to submit PR with updates](https://github.com/n1k0/nicolas.perriault.net/) -->
 
 
-###This initially feels a little overwhelming
+###This feels a little overwhelming
 <iframe src="http://giphy.com/embed/FdvUazOcLjwzK?hideSocial=true" width="680" height="567" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
 <!-- ConfusionCubsRunning-FdvUazOcLjwzK -->
 <!-- Polar Bear GIFS
@@ -90,6 +90,8 @@ penguinSlide_hereWeGo-9UCStxAde7lK -->
 
 ###Hands-on
 - *These steps will prepare you for the AWS S3 deployment steps in the upcoming sections.
+  - *Follow along:* http://aln787.github.io/staticSites/#/1/5
+<br><br>
 
 ```
 git clone https://github.com/aln787/frozenFlask.git && cd $_
@@ -242,13 +244,13 @@ cd build && http-server -p 8083 && cd ..
 #Why AWS / Register
 
 
-###Gartner's Magic Quadrant - IaaS Providers
-<img src="images/s3/AWS_Gartner_2015_MQ.png" height="500">
-
-
 ###Suprising how far ahead Amazon is!
 <iframe src="http://giphy.com/embed/vBVCam8nE7uxy?hideSocial=true" width="680" height="567" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
 <!-- GetTheBabby-vBVCam8nE7uxy -->
+
+
+###Gartner's Magic Quadrant - IaaS Providers
+<img src="images/s3/AWS_Gartner_2015_MQ.png" height="500">
 
 
 ###Time to get on board!
@@ -436,3 +438,8 @@ aws s3api put-bucket-website --bucket frozen-flask-cli --website-configuration f
 
 
 #Future talk if folks are interested
+
+---
+
+###Thank you!!! 
+![](images/FrozenVictory.jpg)
