@@ -94,13 +94,14 @@ penguinSlide_hereWeGo-9UCStxAde7lK -->
 <br><br>
 
 ```
-git clone https://github.com/aln787/frozenFlask.git && cd $_
-virtualenv venv
-#(todo)Add python version number to the command above, to ensure comparability
+git clone https://github.com/aln787/frozenFlask.git
+cd frozenFlask
+virtualenv venv 
 source venv/bin/activate
-pip install
+pip install -r requirements.txt
 subl .
 ```
+<!-- which python -->
 
 - Let's take a quick look at whole the project.
 
@@ -150,7 +151,7 @@ if __name__ == "__main__":
 ```
 python sitebuilder.py
 #(todo) determine why this is not locating flask on the plane
-# visit localhost:8002
+# visit http://127.0.0.1:8002/
 ```
 <br>
 ####Static
@@ -158,6 +159,7 @@ python sitebuilder.py
 open build/index.html
 #if you have http-server installed
 cd build && http-server -p 8083 && cd ..
+# visit http://0.0.0.0:8083
 ```
 
 
@@ -403,6 +405,7 @@ aws s3api put-bucket-website --bucket frozen-flask-cli --website-configuration f
 #aws s3api put-bucket-website help
 ```
 
+- View uploaded site: http://frozen-flask-cli.s3-website-us-east-1.amazonaws.com/
 - *Notes: 
   - S3 bucket names have to be globally unique.
   - The AWS API requests for "put-bucket-website" fails with an unclear error messages, if your bucket name contains any capital letters.
