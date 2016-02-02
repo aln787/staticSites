@@ -17,9 +17,13 @@
 
 
 <img src="images/CapitalOneLabs_Overview.png" height="600">
+<br>
+<small><a href="http://capitalonecareers.com/">Capital One</a></small>
 
 
 <img src="images/CapitalOneLabs_Work.png" height="600">
+<br>
+<small><a href="https://www.capitalonelabs.com/#/about">Capital One Labs</a></small>
 
 ---
 
@@ -65,7 +69,9 @@ touch templates/index.html
 <!-- - [Place to submit PR with updates](https://github.com/n1k0/nicolas.perriault.net/) -->
 
 
+###This initially feels a little overwhelming
 <iframe src="http://giphy.com/embed/FdvUazOcLjwzK?hideSocial=true" width="680" height="567" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
+<!-- ConfusionCubsRunning-FdvUazOcLjwzK -->
 <!-- Polar Bear GIFS
 RollAndSlide-XGHCQGcfyl6lW
 Help-H2VD6psStWlJ6
@@ -228,7 +234,7 @@ cd build && http-server -p 8083 && cd ..
 ###Let's get out of here!!
 <iframe src="http://giphy.com/embed/9hbECTMVSdG0?hideSocial=true" width="680" height="567" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
 <!-- Lets-GetOutOfHere-9hbECTMVSdG0 -->
-
+<br>
 - Time time to put your static site up on S3.
 
 ---
@@ -240,10 +246,12 @@ cd build && http-server -p 8083 && cd ..
 <img src="images/s3/AWS_Gartner_2015_MQ.png" height="500">
 
 
+###Suprising how far ahead Amazon is!
 <iframe src="http://giphy.com/embed/vBVCam8nE7uxy?hideSocial=true" width="680" height="567" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
 <!-- GetTheBabby-vBVCam8nE7uxy -->
 
 
+###Time to get on board!
 <img src="images/AWS_HomePage.png" height="500">
 
 - [Register](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html)
@@ -253,9 +261,11 @@ cd build && http-server -p 8083 && cd ..
 #AWS S3 Deploy using the AWS console
 
 
+###AWS Console - S3
 <img src="images/s3/AWS_S3.png" height="540">
 
 
+###Create folders and add files
 <img src="images/s3/S3-CreateFolders_and_AddFiles.png" height="540">
 
 
@@ -271,16 +281,19 @@ ls -lah
 ```
 
 
+###Enable Static Hosting
 <img src="images/s3/S3-Enable-Static-Website-Hosting.png" height="540">
 
 
 <img src="images/s3/S3-403.png" height="540">
 
 
+###Not 403!!!  Help!
 <iframe src="http://giphy.com/embed/H2VD6psStWlJ6?hideSocial=true" width="680" height="567" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
 <!-- Help-H2VD6psStWlJ6 -->
 
 
+####Update permissions with a bucket policy
 <img src="images/s3/S3-Add-Bucket-Policy.png" height="540">
 
 
@@ -303,15 +316,16 @@ ls -lah
 ```
 
 
+###View Site
 <img src="images/s3/S3-Done-OpenSite.png" height="440">
 
 - [Example Simple Frozen-Flask Site](http://frozen-flask-bucket2.s3-website-us-east-1.amazonaws.com/)
 - [S3 Bucket(*Permission required to view)](https://console.aws.amazon.com/s3/home?region=us-west-2#&bucket=frozen-flask-bucket2&prefix=)
 
 
-<iframe src="http://giphy.com/embed/wHSMEx2TtEo8?hideSocial=true" width="680" height="567" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
-<!-- Slap-wHSMEx2TtEo8 -->
-Note: That really sucks compared to just checking in your GH-pages branch.
+###This process feels like you are fighting Amazon
+<iframe src="http://giphy.com/embed/ewHSMEx2TtEo8?hideSocial=true" width="680" height="567" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
+<!-- Slap-wHSMEx2TtEo8 or ewHSMEx2TtEo8-->
 
 ---
 
@@ -319,8 +333,8 @@ Note: That really sucks compared to just checking in your GH-pages branch.
 
 
 ####There has to be a faster way!!
-<iframe src="http://giphy.com/embed/9UCStxAde7lK?hideSocial=true" width="680" height="567" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
-<!-- penguinSlide_hereWeGo-9UCStxAde7lK -->
+<iframe src="http://giphy.com/embed/qyCDVJBPdBET6?hideSocial=true" width="680" height="567" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
+<!-- penguinSlide_hereWeGo-9UCStxAde7lK or PT88CWkUepFpS or qyCDVJBPdBET6 or rFrju0XGospHi or l49FvM5VWIPnyiyVW-->
 
 
 ###AWS CLI Install
@@ -342,7 +356,7 @@ aws help
 <img src="images/iam/IAM_console.png" height="540">
 
 
-###Create a new user if you don't already have one created
+###Create a new user
 <img src="images/iam/IAM_createNewUser.png" height="540">
 
 
@@ -358,10 +372,10 @@ aws help
 <iframe src="http://giphy.com/embed/tbAY4hlx9fzjy?hideSocial=true" width="400" height="400" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
 <!-- Flying?-tbAY4hlx9fzjy -->
 
-- Kinda makes you want to pull your hair out.
+- Kinda makes you want to try to fly away
 
 
-###Create Access Key
+###Create Access Key and Secret
 <img src="images/iam/IAM_createAccessKey.png" height="540">
 
 
@@ -398,14 +412,6 @@ aws s3api put-bucket-website --bucket frozen-flask-cli --website-configuration f
 
 ---
 
-#AWS Automation 
-##W/ Python Boto3
-
-
-#Future talk if folks are interested
-
----
-
 #Additional Information
 
 
@@ -422,3 +428,11 @@ aws s3api put-bucket-website --bucket frozen-flask-cli --website-configuration f
   - [Place to submit PR with updates](https://github.com/n1k0/nicolas.perriault.net/)
 - [Source for this presentation](http://github.com/aln787/staticSites)
 -  [Source for my simple frozen-flask static blog site](http://github.com/aln787/frozenFlask)
+
+---
+
+#AWS Automation 
+##W/ Python Boto3
+
+
+#Future talk if folks are interested
